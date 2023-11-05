@@ -7,9 +7,9 @@ import PySimpleGUI as sg
 sg.theme('LightBrown7')
 
 extensions = ['png', 'jpg']
-layout = [[sg.Input()], [sg.Button('Select', font=('Georgia 18'))], [sg.Combo(extensions, key="inp", font=('Forte', 18)), sg.Button('Convert', font=('OCR\ B\ MT 18'))]]
+layout = [[sg.Input("", font=('Times\ New\ Roman 16'), key='-INPUT-')], [sg.FileBrowse('Select', font=('Georgia 18'), file_types=(('PDF Files', '*.pdf'),))], [sg.Combo(extensions, key="inp", disabled=True, default_value="png", enable_events= True, font=('Arial 18')), sg.Button('Convert', disabled=True, font=('Arial 17'), enable_events=True)]]
 
-window = sg.Window('PDF to Image', layout, size=(370, 135), resizable=False, element_justification='c')
+window = sg.Window('PDF to Image', layout, size=(370, 160), resizable=False, element_justification='c')
 
 while True:
 	event, values = window.read()
