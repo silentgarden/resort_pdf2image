@@ -1,5 +1,6 @@
 from pdf2image import convert_from_path
 
-images = convert_from_path('example2.pdf')
+url = r'C:\Users\Admin\Documents\Invoice Recipts\doc files\doc new\Monka Walch.pdf'
+images = convert_from_path(url)
 
 images[0].save('pagex'+'.jpg', 'JPEG')
